@@ -1,0 +1,9 @@
+project: savantenvs/pvsneslib
+target: smconv
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/smconv/testsuite
+cmds:
+  - cmd: /mayhem/smconv --ext=.it -s -o sb @@
+    timeout: 10
+    max_length: 32768

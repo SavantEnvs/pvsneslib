@@ -1,0 +1,9 @@
+project: savantenvs/pvsneslib
+target: opt816
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/opt816/testsuite
+cmds:
+  - cmd: /mayhem/opt816 --ext=.asm -q -o out.asm -i @@
+    timeout: 30
+    max_length: 16384

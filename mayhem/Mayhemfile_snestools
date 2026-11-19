@@ -1,0 +1,9 @@
+project: savantenvs/pvsneslib
+target: snestools
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snestools/testsuite
+cmds:
+  - cmd: /mayhem/snestools --ext=.sfc -q -hc01 -htHELLO -hS! @@
+    timeout: 30
+    max_length: 65536

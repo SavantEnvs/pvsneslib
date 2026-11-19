@@ -1,0 +1,2 @@
+# Upstream's .dockerignore is "*", which would drop the whole build context; the commit image needs it all.
+.git/modules

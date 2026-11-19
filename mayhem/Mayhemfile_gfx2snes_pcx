@@ -1,0 +1,8 @@
+project: savantenvs/pvsneslib
+target: gfx2snes_pcx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gfx2snes_pcx/testsuite
+cmds:
+  - cmd: /mayhem/gfx2snes --ext=.pcx -fpcx -q -gs8 -pc16 -m @@
+    timeout: 30

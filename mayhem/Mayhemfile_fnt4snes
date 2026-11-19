@@ -1,0 +1,8 @@
+project: savantenvs/pvsneslib
+target: fnt4snes
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fnt4snes/testsuite
+cmds:
+  - cmd: /mayhem/fnt4snes --ext=.png -q -p -i @@
+    timeout: 30

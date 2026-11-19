@@ -1,0 +1,9 @@
+project: savantenvs/pvsneslib
+target: tmx2snes_tmx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tmx2snes_tmx/testsuite
+cmds:
+  - cmd: /mayhem/tmx2snes --ext=.tmx --with=/mayhem/mayhem/fixtures/tiles.map -q -m tiles.map -i @@
+    timeout: 30
+    max_length: 65536

@@ -1,0 +1,9 @@
+project: savantenvs/pvsneslib
+target: snesbrr_encode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snesbrr_encode/testsuite
+cmds:
+  - cmd: /mayhem/snesbrr --in=2 --ext=.wav -e @@ out.brr
+    timeout: 30
+    max_length: 65536

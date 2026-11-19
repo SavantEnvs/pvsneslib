@@ -1,0 +1,9 @@
+project: savantenvs/pvsneslib
+target: constify
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/constify/testsuite
+cmds:
+  - cmd: /mayhem/constify --ext=.c --with=/mayhem/mayhem/fixtures/k.asm --in=2 -q @@ k.asm out.asm
+    timeout: 30
+    max_length: 65536

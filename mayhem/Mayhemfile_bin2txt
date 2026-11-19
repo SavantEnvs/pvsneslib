@@ -1,0 +1,9 @@
+project: savantenvs/pvsneslib
+target: bin2txt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bin2txt/testsuite
+cmds:
+  - cmd: /mayhem/bin2txt --ext=.bin @@
+    timeout: 30
+    max_length: 16384

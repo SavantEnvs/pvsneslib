@@ -1,0 +1,8 @@
+project: savantenvs/pvsneslib
+target: snesromusage
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/snesromusage/testsuite
+cmds:
+  - cmd: /mayhem/snesromusage --ext=.sym -s -g -i @@
+    timeout: 30

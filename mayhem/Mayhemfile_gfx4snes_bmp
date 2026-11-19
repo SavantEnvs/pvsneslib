@@ -1,0 +1,8 @@
+project: savantenvs/pvsneslib
+target: gfx4snes_bmp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gfx4snes_bmp/testsuite
+cmds:
+  - cmd: /mayhem/gfx4snes --ext=.bmp -s 8 -o 16 -u 16 -e 0 -p -m -q -t bmp -i @@
+    timeout: 30

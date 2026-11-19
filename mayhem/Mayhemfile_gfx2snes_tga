@@ -1,0 +1,8 @@
+project: savantenvs/pvsneslib
+target: gfx2snes_tga
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gfx2snes_tga/testsuite
+cmds:
+  - cmd: /mayhem/gfx2snes --ext=.tga -ftga -q -gs8 -pc16 -m @@
+    timeout: 30
